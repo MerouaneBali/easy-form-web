@@ -1,8 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import Head from "next/head";
+import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import actionCreators from "../state/actionCreators";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const state = useSelector((state) => state);
+  const testState = useSelector(({ test }) => test);
+
+  console.log(state, testState);
+
+  const dispatch = useDispatch();
+  const actions = bindActionCreators(actionCreators, dispatch);
+  const { testAction } = bindActionCreators(actionCreators, dispatch);
+
+  console.log(actions, testAction);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,8 +30,12 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <h3>Redux setup text: {testState}</h3>
+
+        <button onClick={() => testAction(1)}>Increment</button>
+
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -58,12 +76,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
