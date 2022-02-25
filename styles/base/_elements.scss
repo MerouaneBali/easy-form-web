@@ -1,0 +1,96 @@
+// @use './_colors' as *;
+
+// button {
+//   appearance: none;
+//   background: none;
+//   border: none;
+//   border-radius: 0.5em;
+//   padding: 0.875em;
+//   cursor: pointer;
+//   font-size: 0.875em;
+//   font-weight: 600;
+
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }
+
+// .button--primary {
+//   color: $light;
+//   background-color: $info;
+// }
+
+// .button--secondary {
+//   color: $info;
+//   background-color: $light;
+// }
+
+// .button--success {
+//   color: $light;
+//   background-color: $success;
+// }
+
+// .button--warning {
+//   color: $light;
+//   background-color: $warning;
+// }
+
+// .button--danger {
+//   color: $light;
+//   background-color: $error;
+// }
+
+// .button--add {
+//   height: 4em;
+//   width: 4em;
+//   background-color: $info;
+//   border-radius: 0.75em;
+
+//   i {
+//     color: $light;
+//   }
+// }
+
+// .button--icon {
+//   height: 2em;
+//   width: 2em;
+//   background-color: rgba($dark, 0.15);
+//   border-radius: 0.5em;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   i {
+//     color: rgba($dark, 0.4);
+//   }
+// }
+
+// input {
+//   appearance: none;
+//   border: none;
+//   background: none;
+//   font-size: 0.875em;
+//   font-weight: 400;
+//   padding: 0.875em;
+// }
+
+// .input--standard {
+//   border: 1px rgba($color: $dark, $alpha: 0.1) solid;
+//   border-radius: 0.5em;
+
+//   &::placeholder {
+//     color: rgba($dark, 0.5);
+//   }
+// }
+
+// input[type="checkbox"] {
+//   appearance: auto;
+//   width: auto;
+//   margin: 0;
+// }
+
+// input[type="checkbox"] + label {
+//   margin: 0;
+//   margin-left: 1em;
+//   color: $dark;
+// }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import actionCreators from "../state/actionCreators";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/layouts/Home.module.scss";
 
 export default function Home() {
   const state = useSelector((state) => state);
