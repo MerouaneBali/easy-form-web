@@ -15,6 +15,9 @@
 # production
 /build
 
+# drafts
+/src/drafts
+
 # misc
 .DS_Store
 *.pem
