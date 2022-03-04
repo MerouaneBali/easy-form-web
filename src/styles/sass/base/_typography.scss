@@ -3,11 +3,11 @@
 h1 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 600;
-  color: $black;
+  color: $dark;
 }
 
 :not(h1, h2, h3) {
   font-size: clamp(1rem, 1.25vw, 1.125rem);
   font-weight: 400;
-  color: $black;
+  color: $dark;
 }
