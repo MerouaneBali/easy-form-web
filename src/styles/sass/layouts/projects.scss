@@ -1,0 +1,86 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 1em));
+  gap: 2em;
+
+  .project {
+    display: grid;
+    gap: 1em;
+    align-items: flex-start;
+    height: fit-content;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 5%);
+
+    h3,
+    p,
+    a,
+    button {
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 0;
+        color: $info;
+      }
+    }
+
+    .add-new-form {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        color: rgba($dark, 0.4);
+      }
+    }
+
+    .form {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1em;
+      border-top: 1px solid rgba($dark, 0.1);
+      cursor: pointer;
+
+      span {
+        color: rgba($dark, 0.4);
+      }
+    }
+  }
+
+  .button--add {
+    position: fixed;
+    right: 3em;
+    bottom: 2em;
+  }
+}
+
+#projects__add_new {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  gap: 1em;
+  justify-content: center;
+  justify-items: center;
+
+  p {
+    text-transform: capitalize;
+  }
+}
+
+@include respond-to-breakpoint("small") {
+  #projects {
+    grid-template-columns: 100%;
+  }
+}

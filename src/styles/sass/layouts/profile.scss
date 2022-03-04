@@ -1,0 +1,30 @@
+@use '../base/colors' as *;
+@use '../utils/breakpoints' as *;
+
+#app__body__content {
+  position: relative;
+}
+
+#profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 360px;
+  padding: 2em;
+  background-color: $light;
+  border-radius: 0.5em;
+
+  display: grid;
+  gap: 1em;
+
+  form {
+    background-color: $light;
+  }
+}
+
+@include respond-to-breakpoint("small") {
+  #profile {
+    min-width: 300px;
+  }
+}

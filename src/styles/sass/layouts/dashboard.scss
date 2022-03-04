@@ -1,0 +1,30 @@
+@use "../base/_colors" as *;
+@use "../utils/breakpoints" as *;
+
+#dashboard {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+
+  #dashboard__body {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: $light;
+    overflow-y: scroll;
+
+    #dashboard__body__content {
+      margin-top: 2em;
+      flex: 1;
+    }
+  }
+}
+
+@include respond-to-breakpoint("small") {
+  // #app_body {
+  //   overflow: scroll;
+  // }
+}

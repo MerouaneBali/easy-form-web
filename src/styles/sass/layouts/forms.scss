@@ -1,0 +1,249 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+// #app__body__content {
+//   display: flex;
+//   flex-direction: column;
+// }
+#forms {
+  // flex: 1;
+  display: grid;
+  gap: 2em;
+
+  #forms--stats {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2em;
+
+    div {
+      background-color: #fff;
+      padding: 2em;
+      text-align: center;
+      border-radius: 0.4em;
+
+      p {
+        color: rgba($color: $dark, $alpha: 0.5);
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-top: 0.25em;
+      }
+    }
+  }
+
+  #forms--settings {
+    display: grid;
+    grid-template-columns: auto auto;
+    // grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, calc(50% - 1em));
+    grid-template-columns: repeat(2, auto);
+    gap: 2em;
+
+    div {
+      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, calc(33% - 1.25em));
+      grid-template-columns: repeat(2, auto);
+      // grid-template-columns: repeat(3, calc((100% / 3) - 1.5em));
+      gap: 2em;
+    }
+
+    p {
+      flex: 1;
+      color: rgba($color: $dark, $alpha: 0.5);
+      background-color: #fff;
+      border-radius: 0.4em;
+      font-weight: 600;
+    }
+
+    button {
+      text-transform: capitalize;
+    }
+
+    svg * {
+      color: red !important;
+    }
+
+    p,
+    button {
+      padding: 1.5em;
+    }
+  }
+
+  #forms--table-container {
+    border-radius: 0.4em;
+    overflow: hidden;
+    // padding: 1em;
+    background-color: #fff;
+
+    div {
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        border: 1px solid rgba($color: $dark, $alpha: 0.15);
+        border-radius: 0.5em;
+        padding: 1em;
+        width: 35%;
+      }
+    }
+
+    table {
+      width: 100%;
+      max-height: 100%;
+      border-collapse: collapse;
+      // border: 1px solid rgba($color: $dark, $alpha: 0.15);
+      background-color: #fff;
+
+      thead {
+        th {
+          text-transform: capitalize;
+          font-weight: 700;
+          text-align: start;
+
+          &:last-child {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+
+      tbody {
+        td {
+          border-bottom: 1px solid rgba($color: $dark, $alpha: 0.15);
+
+          // &:last-child {
+          //   display: flex;
+          //   justify-content: flex-end;
+          // }
+        }
+
+        .form__options {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .form__status {
+            padding: 0;
+            margin-right: 1em;
+
+            p {
+              padding: 0.5em 1em;
+              text-transform: uppercase;
+              color: $light;
+              font-weight: 700;
+              border-radius: 1em;
+              width: fit-content;
+              font-size: 0.75rem;
+
+              i {
+                color: $light;
+                margin-left: 0.5em;
+                font-size: 0.75rem;
+              }
+            }
+
+            .form__status--waiting {
+              background-color: $warning;
+            }
+
+            .form__status--opened {
+              background-color: $success;
+            }
+
+            .form__status--resolved {
+              background-color: $info;
+            }
+          }
+        }
+      }
+
+      tbody {
+        border-top: 1px solid rgba($color: $dark, $alpha: 0.15);
+      }
+
+      td,
+      th {
+        padding: 1em;
+        // border-top: 1px solid rgba($color: $dark, $alpha: 0.15);
+        // border-right: 2px solid rgba($color: $dark, $alpha: 0.15);
+      }
+    }
+  }
+
+  #forms--stats div,
+  #forms--settings p,
+  #forms--settings button,
+  #forms--table-container {
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 5%);
+  }
+
+  #forms--settings p,
+  #forms--settings button,
+  #forms--table-container {
+    border: 1px solid rgba($color: $dark, $alpha: 0.15);
+  }
+
+  .button--secondary {
+    background-color: #fff;
+  }
+}
+
+#forms + .modal-container {
+  .model__body form div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      margin: 0;
+      margin-left: 1em;
+    }
+  }
+}
+
+#forms__select-display-fields {
+  span:first-child {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  span:last-child {
+    color: rgba($color: $dark, $alpha: 0.75);
+  }
+
+  button {
+    text-transform: capitalize;
+  }
+}
+
+.spinner {
+  color: $light;
+  margin-left: 0.5em;
+  animation: spin 0.75s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+#forms .spinner {
+  color: $dark;
+  margin: 0;
+}
+
+@include respond-to-breakpoint("small") {
+  // #forms {
+  //   grid-template-columns: 100%;
+  // }
+}

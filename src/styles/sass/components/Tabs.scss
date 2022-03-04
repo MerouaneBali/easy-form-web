@@ -1,0 +1,41 @@
+@use '../base/colors' as *;
+
+.tabs {
+  border: 1px solid #ccc;
+}
+
+.tab-list {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+
+  // * {
+  //   transition: none !important;
+  // }
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  border-radius: 0;
+  flex: 1;
+  border-radius: 0;
+  padding: 0.5em 1.5em;
+  transition: none;
+  border-bottom: 1px solid transparent;
+
+  &:hover:not(.tab-list-active) {
+    transform: scale(1);
+    background-color: rgba($color: $info, $alpha: 0.1);
+    border-bottom-color: $info;
+  }
+}
+
+.tab-list-active {
+  background-color: $info;
+  color: $light;
+  border-bottom-color: $info;
+}

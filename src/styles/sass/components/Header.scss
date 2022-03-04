@@ -1,0 +1,48 @@
+@use '../base/colors' as *;
+@use '../utils/breakpoints' as *;
+
+#header {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    flex: 1;
+    text-transform: capitalize;
+  }
+
+  #header__pfp {
+    display: flex;
+    align-items: center;
+    text-decoration-line: none;
+
+    p:last-child {
+      background-color: $dark;
+      text-transform: uppercase;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        height: 1.3rem;
+        color: $light;
+        font-weight: 700;
+      }
+    }
+
+    p + p {
+      margin-left: 2em;
+    }
+  }
+}
+
+@include respond-to-breakpoint("small") {
+  #header {
+    a p:first-child {
+      display: none;
+    }
+  }
+}

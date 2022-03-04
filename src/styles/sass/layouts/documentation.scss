@@ -1,0 +1,19 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#documentation {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  .tabs {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  .tabs {
+    width: fit-content;
+  }
+}

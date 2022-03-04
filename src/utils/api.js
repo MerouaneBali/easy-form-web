@@ -11,7 +11,6 @@ class Api {
   async isUserLoggedIn() {
     try {
       const res = await this.instance.get("/authentication");
-      console.log(res);
       return true;
     } catch (error) {
       console.log(error);
