@@ -18,6 +18,9 @@
 # drafts
 /src/drafts
 
+# css
+/src/styles/css
+
 # misc
 .DS_Store
 *.pem
