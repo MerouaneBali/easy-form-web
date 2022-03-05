@@ -1,5 +1,5 @@
-@use '../base/colors' as *;
-@use '../utils/breakpoints' as *;
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
 
 #header {
   display: flex;
@@ -25,6 +25,7 @@
       text-align: center;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
 
       span {
         height: 1.3rem;
