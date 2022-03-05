@@ -122,3 +122,16 @@ input[type="checkbox"] + label {
 .icon__error * {
   color: $error;
 }
+
+a {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.link__primary {
+  color: $info;
+}
+
+.link__shadow {
+  color: $dark;
+}
