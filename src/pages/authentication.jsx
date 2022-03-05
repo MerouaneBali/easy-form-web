@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Code from "../components/Code";
 import Tabs from "../components/Tabs";
@@ -159,7 +159,7 @@ function Authentication() {
     setLoading(false);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     consoleLogDevInfo();
   }, []);
 
