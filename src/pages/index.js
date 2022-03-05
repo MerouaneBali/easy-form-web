@@ -19,11 +19,11 @@ export default function Home() {
       <main>
         <aside>
           <Logo />
-          <h1>Form handling made easy!</h1>
+          <h1>Easy Forms</h1>
           <p>
-            Easy to connect to API for developers who are working on websites or
-            apps with simple forms, and want to just simply handle those forms
-            post requests without creating/managing their own backend
+            Connect your forms to our API and let us do the work of: storing,
+            managing, displaying & reporting your data, without the need of your
+            own backend
           </p>
           {/* <Code
             code={`<form action="https://easy-forms-api.herokuapp.com/<FORM_KEY>" method="post">
