@@ -25,7 +25,7 @@ export default function Home() {
             apps with simple forms, and want to just simply handle those forms
             post requests without creating/managing their own backend
           </p>
-          <Code
+          {/* <Code
             code={`<form action="https://easy-forms-api.herokuapp.com/<FORM_KEY>" method="post">
 
   <label for="first-name">First name:</label>
@@ -38,7 +38,81 @@ export default function Home() {
 
 </form>`}
             language="html"
-          />
+          /> */}
+          <Tabs>
+            <div label="HTML">
+              <Code
+                code={`<form action="https://easy-forms-api.herokuapp.com/<FORM_KEY>" method="post">
+
+<label for="first-name">First name:</label>
+<input type="text" id="first-name" name="first-name" value="John">
+
+<label for="last-name">Last name:</label>
+<input type="text" id="last-name" name="last-name" value="Doe">
+
+<input type="submit" value="Submit">
+
+</form>`}
+                language="html"
+              />
+            </div>
+
+            <div label="Fetch">
+              <Code
+                code={`fetch("https://easy-forms-api.herokuapp.com/<FORM_KEY>", {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+firstName: "John",
+lastName: "Doe",
+message: "Message goes in here...",
+}),
+})
+.then(response => {
+console.log('Success:', response.data);
+})
+.catch((error) => {
+console.error('Error:', error);
+});`}
+                language="javascript"
+              />
+            </div>
+            <div label="AJAX">
+              <Code
+                code={`$.post("https://easy-forms-api.herokuapp.com/<FORM_KEY>", 
+{
+firstName: "John",
+lastName: "Doe",
+message: "Message goes in here...",
+})
+.done(function(data, status) {
+console.log(data, status)
+})
+.fail(function(jqXHR, textStatus, errorThrown) {
+console.log(jqXHR, textStatus, errorThrown)
+});`}
+                language="javascript"
+              />
+            </div>
+            <div label="Axios">
+              <Code
+                code={`axios.post("https://easy-forms-api.herokuapp.com/<FORM_KEY>", {
+firstName: "John",
+lastName: "Doe",
+message: "Message goes in here...",
+})
+.then(function (response) {
+console.log(response);
+})
+.catch(function (error) {
+console.log(error);
+});`}
+                language="javascript"
+              />
+            </div>
+          </Tabs>
           <ul>
             <li>
               <a
@@ -663,7 +737,12 @@ export default function Home() {
           </svg>
           <p>
             Developed with ❤️ by{" "}
-            <a className="link__primary" href="mailto:merouane.bali.inbox@gmail.com">Merouane Bali</a>
+            <a
+              className="link__primary"
+              href="mailto:merouane.bali.inbox@gmail.com"
+            >
+              Merouane Bali
+            </a>
           </p>
         </aside>
       </main>
