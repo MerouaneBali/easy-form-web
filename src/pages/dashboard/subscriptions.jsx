@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import DashboardTemplate from "../../components/DashboardTemplate";
 
-function Subscriptions({ headerTitleAction }) {
+function SubscriptionsMirror({ headerTitleAction }) {
   useEffect(() => {
     headerTitleAction("Subscriptions");
   }, []);
@@ -13,4 +13,4 @@ function Subscriptions({ headerTitleAction }) {
   );
 }
 
-export default Subscriptions;
+export default SubscriptionsMirror;
