@@ -1,7 +1,8 @@
-@use '../base/colors' as *;
+@use "../base/colors" as *;
 
 .tabs {
   border: 1px solid #ccc;
+  background-color: $light;
 }
 
 .tab-list {
