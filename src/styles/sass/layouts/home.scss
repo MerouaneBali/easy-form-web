@@ -1,0 +1,121 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#Home {
+  height: 100vh;
+  width: 100vw;
+
+  nav {
+    width: 100%;
+    background-color: $light;
+    padding: 0.75em 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      li + li {
+        margin-left: 2em;
+      }
+
+      li:nth-last-child(2) {
+        flex: 1;
+        text-align: start;
+      }
+
+      li:last-child {
+        display: flex;
+        align-self: flex-end;
+
+        button + button {
+          margin-left: 2em;
+        }
+      }
+    }
+  }
+
+  main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    aside {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2em;
+
+      gap: 2em;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+
+        li + li {
+          margin-left: 2em;
+        }
+      }
+    }
+
+    aside:first-child {
+      // display: grid;
+
+      background-color: rgba($color: $info, $alpha: 1);
+      background-color: $info;
+      position: relative;
+
+      $bg-color: $info;
+      $dot-color: $light;
+
+      $dot-size: 1px;
+      $dot-space: 22px;
+
+      background: linear-gradient(
+            90deg,
+            $bg-color ($dot-space - $dot-size),
+            transparent 1%
+          )
+          center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%)
+          center,
+        $dot-color;
+      background-size: $dot-space $dot-space;
+
+      h1,
+      p,
+      a {
+        color: $light;
+        max-width: 60ch;
+      }
+
+      pre {
+        border-radius: 0.75em;
+      }
+
+      .logo {
+        outline: 0.15em solid $light;
+        border-radius: 50%;
+      }
+
+      ul li {
+        height: 1.25em;
+        width: 1.25em;
+      }
+    }
+
+    aside:last-child {
+      #Home__diagram {
+        width: 100%;
+      }
+    }
+  }
+}
