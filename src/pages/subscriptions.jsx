@@ -1,7 +1,12 @@
 import React from "react";
+import GeneralTemplate from "../components/GeneralTemplate";
 
 function Subscriptions() {
-  return <div>subscriptions</div>;
+  return (
+    <GeneralTemplate>
+      <div id="Subscriptions">subscriptions</div>
+    </GeneralTemplate>
+  );
 }
 
 export default Subscriptions;
