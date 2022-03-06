@@ -1,0 +1,39 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#Navigation {
+  width: 100%;
+  background-color: $light;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    li a {
+      text-decoration: none;
+    }
+
+    li + li {
+      margin-left: 2em;
+    }
+
+    li:nth-last-child(2) {
+      flex: 1;
+      text-align: start;
+    }
+
+    li:last-child {
+      display: flex;
+      align-self: flex-end;
+
+      button + button {
+        margin-left: 2em;
+      }
+    }
+  }
+}

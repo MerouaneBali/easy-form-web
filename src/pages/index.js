@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import Navigation from "../components/Navigation";
 
 export default function Home() {
   return (
@@ -144,29 +145,7 @@ console.log(error);
           </ul>
         </aside>
         <aside>
-          <nav>
-            <ul>
-              {/* <li>Home</li> */}
-              <li>Docs</li>
-              {/* <li>About</li> */}
-              <li>Contact</li>
-              <li>TOS</li>
-              <li>Privacy Policy</li>
-              <li>
-                {/* <Link href="/authentication" passHref>
-                  <button type="submit" className="button--primary">
-                    Authenticate
-                  </button>
-                </Link> */}
-                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                <a href="/authentication">
-                  <button type="submit" className="button--primary">
-                    Authenticate
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <Navigation />
           <svg
             id="Home__diagram"
             xmlns="http://www.w3.org/2000/svg"
