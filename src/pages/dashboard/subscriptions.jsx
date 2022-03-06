@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Subscriptions from "../subscriptions";
 import DashboardTemplate from "../../components/DashboardTemplate";
 
 function SubscriptionsMirror({ headerTitleAction }) {
@@ -8,7 +9,7 @@ function SubscriptionsMirror({ headerTitleAction }) {
 
   return (
     <DashboardTemplate>
-      <div>subscriptions</div>
+      <Subscriptions />
     </DashboardTemplate>
   );
 }
