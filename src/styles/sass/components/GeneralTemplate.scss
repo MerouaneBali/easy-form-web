@@ -1,0 +1,11 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#GeneralTemplate {
+  padding: 2em;
+  overflow-x: hidden;
+
+  #Navigation {
+    margin-bottom: 2em;
+  }
+}
