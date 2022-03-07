@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import DashboardTemplate from "../../components/DashboardTemplate";
-import Documentation from "../documentation";
+import Documentation from "../_documentation";
 
 function DocumentationMirror({ headerTitleAction }) {
   useEffect(() => {

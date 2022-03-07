@@ -1,12 +1,13 @@
 import React from "react";
 import GeneralTemplate from "../components/GeneralTemplate";
+import Subscriptions from "./_subscriptions";
 
-function Subscriptions() {
+function SubscriptionsMirror() {
   return (
     <GeneralTemplate>
-      <div id="Subscriptions">subscriptions</div>
+      <Subscriptions />
     </GeneralTemplate>
   );
 }
 
-export default Subscriptions;
+export default SubscriptionsMirror;

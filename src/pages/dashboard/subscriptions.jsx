@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Subscriptions from "../subscriptions";
+import Subscriptions from "../_subscriptions";
 import DashboardTemplate from "../../components/DashboardTemplate";
 
 function SubscriptionsMirror({ headerTitleAction }) {
