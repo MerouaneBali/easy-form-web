@@ -7,6 +7,11 @@
   background-color: $light;
   display: flex;
 
+  h1,
+  h3 {
+    border-left: none;
+  }
+
   aside {
     flex: 1;
   }
