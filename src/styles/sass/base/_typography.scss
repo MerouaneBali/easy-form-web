@@ -1,9 +1,16 @@
-@use './colors' as *;
+@use "./colors" as *;
 
 h1 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 600;
   color: $dark;
+}
+
+h1,
+h2 {
+  border-left: 0.2em solid $info;
+  padding-left: 0.5em;
+  text-transform: capitalize;
 }
 
 :not(h1, h2, h3) {
