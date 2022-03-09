@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Easy Forms [Web App] (Beta)
 
-First, run the development server:
+Form handling API for developers who do not want build a whole back-end system for the sake of submitting and storing simple forms from their apps. [Live Demo](https://easy-forms.netlify.app/).
 
-```bash
-npm run dev
-# or
-yarn dev
+## Details
+
+[Easy Forms](https://easy-forms.netlify.app/) is a service that allowes **front-end developers** to direct/connect their forms to a private **API endpoint**, and **store** the data they collect in a Easy Forms database. From there they can easly **view and manage** that data from the administration panel that the service.
+
+![AUTHENTICATION](https://drive.google.com/uc?export=view&id=1r_2S_DvMgXUdyw3ssjRatAqdLFQFeHvJ)
+
+🎲 **NOTE:** The project is still in BETA stage, but it will be improved over time with plans to add many features, such as: Restrict Requests to Project's Domain Name, Overview Page w/Graph, Settings, Subscription, TOS & Privacy Policy Pages...more.
+
+![FIGMA](https://drive.google.com/uc?export=view&id=15uoGYtzyDIs8Yze81V3V2DZIKWwIIHJS)
+
+## Usage
+
+### 1) Create Project:
+step one of using the API is to create a project that will contain all forms related to it
+
+![projects](https://drive.google.com/uc?export=view&id=1PSHdutCAtI_R_CSOgw-F-qUf2mjkU5C2)
+
+### 2) Create Form:
+
+Step two would be is to create a form, and get that form's API key
+![PAGES](https://drive.google.com/uc?export=view&id=1sLNBx64BYe41WMWof8Z3dmlKfgBNLwX1)
+
+### 3) Use API Key
+
+You can then direct your form to post it's data to the given private API endpoint
+
+
+```
+<form action="https://easy-forms-api.herokuapp.com/<FORM_KEY>" method="post">
+
+    <label for="first-name">First name:</label>
+    <input type="text" id="first-name" name="first-name" value="John">
+
+    <label for="last-name">Last name:</label>
+    <input type="text" id="last-name" name="last-name" value="Doe">
+
+    <input type="submit" value="Submit">
+
+</form>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4) Manage Data:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+View and manage your data from the provided dashboard
+![PAGES](https://drive.google.com/uc?export=view&id=1Ax7hh6ep7gOKTd_eGdz1T3fg8pRm3SIg)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Available Scripts
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+In the project directory, you can run:
 
-## Learn More
+### `npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `npm run lint`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Launches the linting test runner mode.
 
-## Deploy on Vercel
+### `npm run build`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Builds the app for production to the `build` folder.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `npm run start`
+
+Starts the production build from the `build` folder.
+
+### `gulp watch`
+
+Watch for SCSS file changes and update app styles on the go
+
+### `gulp buildStyles`
+
+Build app's CSS styles from SCSS files
+
+## Other Projects
+
+Check out my portfolio website [here](https://merouane-bali.netlify.app/).
