@@ -1,0 +1,48 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#overview {
+  display: grid;
+  gap: 4em;
+
+  section {
+    display: grid;
+    gap: 1em;
+  }
+
+  #overview__charts__container {
+    position: relative;
+    display: flex;
+
+    div {
+      position: relative;
+
+      &:first-child {
+        flex: 1;
+      }
+
+      &:last-child {
+        flex: 0.5;
+      }
+    }
+  }
+
+  #overview__recommended {
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+
+      article {
+        display: grid;
+        gap: 1em;
+        max-width: 60ch;
+        align-content: flex-start;
+
+        h3 {
+          color: $info;
+        }
+      }
+    }
+  }
+}
