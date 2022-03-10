@@ -19,17 +19,22 @@ function Documentation() {
       <Tabs>
         <div label="HTML">
           <Code
-            code={`<form action="https://www.easy-forms.com/<FORM_KEY>" method="post">
+            code={`<form
+  action="https://www.easy-forms.com/<FORM_KEY>"
+  method="post"
+  target="_blank"
+  onsubmit="this.reset();"
+>
 
-    <label for="first-name">First name:</label>
-    <input type="text" id="first-name" name="first-name" value="John">
+  <label for="first-name">First name:</label>
+  <input type="text" id="first-name" name="first-name">
 
-    <label for="last-name">Last name:</label>
-    <input type="text" id="last-name" name="last-name" value="Doe">
+  <label for="last-name">Last name:</label>
+  <input type="text" id="last-name" name="last-name">
 
-    <input type="submit" value="Submit">
+  <input type="submit" value="Submit">
 
-  </form>`}
+</form>`}
             language="html"
           />
         </div>
