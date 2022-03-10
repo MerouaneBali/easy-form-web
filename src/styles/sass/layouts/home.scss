@@ -90,3 +90,26 @@
     }
   }
 }
+
+@include respond-to-breakpoint("small") {
+  #Home {
+    main {
+      flex-direction: column;
+
+      nav {
+        li {
+          display: none;
+        }
+
+        li:nth-child(1),
+        li:nth-child(2) {
+          display: block;
+        }
+      }
+
+      aside:first-child {
+        display: block;
+      }
+    }
+  }
+}
