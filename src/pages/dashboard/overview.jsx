@@ -147,7 +147,14 @@ function Overview({ headerTitleAction }) {
           <h2>recommended for you</h2>
           <main>
             <article>
-              <h3>
+              <h3
+                onClick={() =>
+                  window.open(
+                    "https://www.storytellermn.com/blog/increase-the-conversion-rate-landing-pages#:~:text=Your%20landing%20page%20should%20engage,brand%20story%20and%20build%20trust.",
+                    "_blank"
+                  )
+                }
+              >
                 5 Tips to Increase the Conversion Rate of Your Landing Page
               </h3>
               <small>By: Guest Blogger - February 1, 2018</small>
@@ -161,7 +168,16 @@ function Overview({ headerTitleAction }) {
               </p>
             </article>
             <article>
-              <h3>6 Tips To Gain User Engagement With A Landing Page</h3>
+              <h3
+                onClick={() =>
+                  window.open(
+                    "https://webnus.net/tips-to-gain-user-engagement-with-a-landing-page/",
+                    "_blank"
+                  )
+                }
+              >
+                6 Tips To Gain User Engagement With A Landing Page
+              </h3>
               <small>By: Emma Coffinet - February 23, 2022</small>
               <p>
                 In this article we present you with the six most important tips
@@ -175,7 +191,16 @@ function Overview({ headerTitleAction }) {
               </p>
             </article>
             <article>
-              <h3>How to Design Email Landing Pages</h3>
+              <h3
+                onClick={() =>
+                  window.open(
+                    "https://www.drift.com/learn/landing-page/email-landing-pages/",
+                    "_blank"
+                  )
+                }
+              >
+                How to Design Email Landing Pages
+              </h3>
               <small>By: By Drift - August 19th, 2021</small>
               <p>
                 After all these years, 50% of customers still say email is their
@@ -191,7 +216,16 @@ function Overview({ headerTitleAction }) {
               </p>
             </article>
             <article>
-              <h3>How to Get More Landing Page Engagement in 2021</h3>
+              <h3
+                onClick={() =>
+                  window.open(
+                    "https://www.business2community.com/strategy/how-to-get-more-landing-page-engagement-in-2021-02381395",
+                    "_blank"
+                  )
+                }
+              >
+                How to Get More Landing Page Engagement in 2021
+              </h3>
               <small>By: Syed Balkhi - January 25th, 2021</small>
               <p>
                 As we approach the end of the first month of 2021, many business
