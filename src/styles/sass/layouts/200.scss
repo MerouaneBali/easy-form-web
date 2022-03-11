@@ -1,0 +1,34 @@
+@use "../base/colors" as *;
+@use "../utils/breakpoints" as *;
+
+#form-submitted {
+  height: 100vh;
+  width: 100%;
+  gap: 2em;
+
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+
+  h1,
+  h2 {
+    border-left: none;
+    padding-left: 0;
+    color: $success;
+  }
+
+  h3 span {
+    color: $info;
+  }
+
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  svg * {
+    color: $success;
+  }
+}
