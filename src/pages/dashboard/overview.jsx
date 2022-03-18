@@ -86,6 +86,11 @@ function Overview({ headerTitleAction }) {
               display: false,
             },
           },
+          scales: {
+            y: {
+              min: 0,
+            },
+          },
         },
       });
     }
