@@ -203,15 +203,7 @@ function Projects({ headerTitleAction }) {
                 <div className="project-header">
                   {/* eslint-disable-next-line no-underscore-dangle */}
                   {/* <Link href={`/projects/${project._id}`} passHref> */}
-                  <Link
-                    href={{
-                      pathname: `/dashboard/projects/[projectId]`,
-                      query: { projectId: project._id },
-                    }}
-                    passHref
-                  >
-                    <h3>{project.name}</h3>
-                  </Link>
+                  <h3>{project.name}</h3>
                   <button
                     type="button"
                     onClick={() => {
