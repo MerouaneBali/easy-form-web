@@ -4,7 +4,7 @@ import { faChevronRight, faCogs } from "@fortawesome/free-solid-svg-icons";
 function Step5({ project, setProject, setCurrentStep }) {
   return (
     <div id="step_5" className="step">
-      <h2>Here you have your forms URLs!</h2>
+      <h1>Here you have your forms URLs!</h1>
 
       <p>Add them on your {project.projectName}'s forms</p>
 
