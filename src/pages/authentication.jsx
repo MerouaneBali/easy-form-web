@@ -85,17 +85,14 @@ function Authentication() {
 
       case "login":
         try {
-          await api.instance
-            .post(
-              "/authentication/login",
-              {
-                email: data.email,
-                password: data.password,
-              },
-              { withCredentials: true }
-            )
-            // eslint-disable-next-line no-console
-            .then((res) => console.log(res));
+          await api.instance.post(
+            "/authentication/login",
+            {
+              email: data.email,
+              password: data.password,
+            },
+            { withCredentials: true }
+          );
 
           // setAuthSession(Cookies.get("session"));
 
