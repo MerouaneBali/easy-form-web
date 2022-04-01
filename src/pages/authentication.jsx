@@ -60,7 +60,7 @@ function Authentication() {
 
           // setAuthSession(Cookies.get("session"));
 
-          router.push("/dashboard/overview");
+          router.push("/dashboard");
         } catch (error) {
           const res = error.response;
 
@@ -96,7 +96,7 @@ function Authentication() {
 
           // setAuthSession(Cookies.get("session"));
 
-          router.push("/dashboard/overview");
+          router.push("/dashboard");
         } catch (error) {
           const res = error.response;
 
