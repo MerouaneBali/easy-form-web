@@ -2,6 +2,7 @@
 @use "../utils/breakpoints" as *;
 
 #multistep-onboarding {
+  position: absolute;
   height: 100vh;
   width: 100vw;
   display: flex;
