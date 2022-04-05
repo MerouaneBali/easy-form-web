@@ -1,6 +1,6 @@
 import React from "react";
 
-function Step1({ project, setProject, setCurrentStep }) {
+function Step1({ setCurrentStep }) {
   return (
     <div id="step_1" className="step">
       <h1>Hello! Welcome to Easy Forms</h1>

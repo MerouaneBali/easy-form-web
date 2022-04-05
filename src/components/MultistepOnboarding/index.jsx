@@ -22,32 +22,18 @@ function MultistepOnboarding() {
   const steps = [
     {
       name: "Intro",
-      View: () => (
-        <Step1
-          project={project}
-          setProject={setProject}
-          setCurrentStep={setCurrentStep}
-        />
-      ),
+      View: () => <Step1 setCurrentStep={setCurrentStep} />,
     },
     {
       name: "Project",
       View: () => (
-        <Step2
-          project={project}
-          setProject={setProject}
-          setCurrentStep={setCurrentStep}
-        />
+        <Step2 setProject={setProject} setCurrentStep={setCurrentStep} />
       ),
     },
     {
       name: "Forms",
       View: () => (
-        <Step3
-          project={project}
-          setProject={setProject}
-          setCurrentStep={setCurrentStep}
-        />
+        <Step3 setProject={setProject} setCurrentStep={setCurrentStep} />
       ),
     },
     {
@@ -137,18 +123,7 @@ function MultistepOnboarding() {
             </SwiperSlide>
           ))}
           <SwiperSlide className="carousel__wrapper">
-            {/* {currentStep === steps.length && (
-              <Step5
-                project={project}
-                setProject={setProject}
-                setCurrentStep={setCurrentStep}
-              />
-              )} */}
-            <Step5
-              project={project}
-              setProject={setProject}
-              setCurrentStep={setCurrentStep}
-            />
+            <Step5 project={project} />
           </SwiperSlide>
         </Swiper>
       </div>

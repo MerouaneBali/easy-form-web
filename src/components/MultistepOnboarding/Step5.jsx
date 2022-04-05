@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faCogs } from "@fortawesome/free-solid-svg-icons";
-
-function Step5({ project, setProject, setCurrentStep }) {
+function Step5({ project }) {
   return (
     <div id="step_5" className="step">
       <h1>Here you have your forms URLs!</h1>

@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
-function Step3({ project, setProject, setCurrentStep }) {
+function Step3({ setProject, setCurrentStep }) {
   return (
     <div id="step_3" className="step">
       <h1>How many forms do have in this project?</h1>

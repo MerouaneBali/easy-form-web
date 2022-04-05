@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-function Step2({ project, setProject, setCurrentStep }) {
+function Step2({ setProject, setCurrentStep }) {
   const [projectName, setProjectName] = useState("");
 
   return (

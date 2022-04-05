@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faCogs } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { faCogs } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 
 function Step4({ project, setProject, setCurrentStep }) {
@@ -41,11 +40,11 @@ function Step4({ project, setProject, setCurrentStep }) {
               {...register(String(index), {
                 minLength: {
                   value: 8,
-                  message: "Form name must be at least 8 characters long", // JS only: <p>error message</p> TS only support string
+                  message: "Form name must be at least 8 characters long",
                 },
                 maxLength: {
                   value: 200,
-                  message: "Form name must be less than 200 characters long", // JS only: <p>error message</p> TS only support string
+                  message: "Form name must be less than 200 characters long",
                 },
                 required: true,
               })}
