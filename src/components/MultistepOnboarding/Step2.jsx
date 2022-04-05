@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-function Step2({ setProject, setCurrentStep }) {
+function Step2({ setProject, nextStep }) {
   const [projectName, setProjectName] = useState("");
 
   return (
@@ -24,7 +24,7 @@ function Step2({ setProject, setCurrentStep }) {
           if (!projectName) return;
 
           setProject((prevState) => ({ ...prevState, projectName }));
-          setCurrentStep((prevState) => prevState + 1);
+          nextStep();
         }}
       >
         Next

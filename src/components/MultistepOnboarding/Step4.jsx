@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 
-function Step4({ project, setProject, setCurrentStep }) {
+function Step4({ project, setProject, nextStep }) {
   const {
     register,
     resetField,
@@ -12,7 +12,7 @@ function Step4({ project, setProject, setCurrentStep }) {
 
   const onSubmit = (data) => {
     setProject((prevState) => ({ ...prevState, forms: data }));
-    setCurrentStep((prevState) => prevState + 1);
+    nextStep();
   };
 
   return (

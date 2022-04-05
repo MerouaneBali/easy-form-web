@@ -1,6 +1,6 @@
 import React from "react";
 
-function Step1({ setCurrentStep }) {
+function Step1({ nextStep }) {
   return (
     <div id="step_1" className="step">
       <h1>Hello! Welcome to Easy Forms</h1>
@@ -8,10 +8,7 @@ function Step1({ setCurrentStep }) {
         Handle your forms without the hassle of building your own back-end
         system again!
       </p>
-      <button
-        className="button button--primary"
-        onClick={() => setCurrentStep((prevState) => prevState + 1)}
-      >
+      <button className="button button--primary" onClick={nextStep}>
         Let's Go
       </button>
     </div>

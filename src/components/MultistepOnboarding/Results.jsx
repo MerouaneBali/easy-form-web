@@ -1,4 +1,4 @@
-function Step5({ project }) {
+function Results({ project }) {
   return (
     <div id="step_5" className="step">
       <h1>Here you have your forms URLs!</h1>
@@ -35,4 +35,4 @@ function Step5({ project }) {
   );
 }
 
-export default Step5;
+export default Results;

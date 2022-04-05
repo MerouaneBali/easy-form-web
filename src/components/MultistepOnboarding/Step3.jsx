@@ -1,4 +1,4 @@
-function Step3({ setProject, setCurrentStep }) {
+function Step3({ setProject, nextStep }) {
   return (
     <div id="step_3" className="step">
       <h1>How many forms do have in this project?</h1>
@@ -12,7 +12,7 @@ function Step3({ setProject, setCurrentStep }) {
                 ...prevState,
                 formsTotal: index + 1,
               }));
-              setCurrentStep((prevState) => prevState + 1);
+              nextStep();
             }}
           >
             <h1>{index + 1}</h1>
