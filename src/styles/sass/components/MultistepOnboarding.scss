@@ -24,8 +24,8 @@
     position: absolute;
   }
 
-  #go-back {
-  }
+  // #go-back {
+  // }
 
   #restart {
     svg {
@@ -85,7 +85,6 @@
 
   #carousel__container {
     flex: 1;
-    // padding: 2em 1em;
 
     #carousel {
       height: 100%;
@@ -223,7 +222,6 @@
 
   .input--error {
     color: $error;
-    // margin-top: 0;
   }
 
   .button--primary {
