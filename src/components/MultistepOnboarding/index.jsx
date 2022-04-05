@@ -16,6 +16,7 @@ function MultistepOnboarding() {
 
   // Project data
   const [project, setProject] = useState({
+    name: "",
     formsTotal: 0,
     forms: {},
   });
