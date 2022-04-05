@@ -1,5 +1,3 @@
-import React from "react";
-
 function Step1({ nextStep }) {
   return (
     <div id="step_1" className="step">

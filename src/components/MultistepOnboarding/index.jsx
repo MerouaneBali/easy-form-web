@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faRedo } from "@fortawesome/free-solid-svg-icons";
-
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";

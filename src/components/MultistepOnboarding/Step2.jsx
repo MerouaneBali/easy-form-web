@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 
 function Step2({ setProject, nextStep }) {
   const [projectName, setProjectName] = useState("");

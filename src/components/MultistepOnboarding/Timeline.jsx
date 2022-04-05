@@ -1,5 +1,3 @@
-import React from "react";
-
 function Timeline({ steps, currentStep, setCurrentStep }) {
   return (
     <ul
