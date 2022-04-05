@@ -28,6 +28,7 @@ function Step4({ project, setProject, setCurrentStep }) {
         className={project.formsTotal > 3 ? "step_4__adjust" : ""}
         onSubmit={handleSubmit(onSubmit)}
       >
+        {/* Rendering a text input for every form */}
         {[...Array(project.formsTotal).keys()].map((index) => (
           <div key={index}>
             <input
@@ -37,6 +38,7 @@ function Step4({ project, setProject, setCurrentStep }) {
               required
               className="input--standard"
               placeholder={`Name of form #${index + 1}...`}
+              // Registering input
               {...register(String(index), {
                 minLength: {
                   value: 8,
@@ -49,6 +51,7 @@ function Step4({ project, setProject, setCurrentStep }) {
                 required: true,
               })}
             />
+            {/* Rendering errors */}
             {errors[index] && (
               <p className="input--error">{errors[index].message}</p>
             )}
